@@ -29,7 +29,7 @@ export default function ResultsPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-7xl">
         {/* Stepper */}
-        <div className="relative bg-linear-to-br from-[#003d82] via-[#0052a8] to-[#0066cc] rounded-lg shadow-sm p-6 mb-8 overflow-hidden">
+        <div className="relative bg-linear-to-br from-[#003d82] via-[#0052a8] to-[#0066cc] rounded-lg shadow-sm p-4 sm:p-6 mb-8 overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
@@ -38,10 +38,10 @@ export default function ResultsPage() {
           </div>
           <div className="flex items-center justify-between max-w-4xl mx-auto relative z-10">
             {steps.map((step, index) => (
-              <div key={step.number} className="flex items-center flex-1">
-                <div className="flex flex-col items-center">
+              <div key={step.number} className="flex items-center flex-1 min-w-0">
+                <div className="flex flex-col items-center min-w-0 flex-1">
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm shrink-0 ${
                       currentStep >= step.number
                         ? 'bg-white text-[#003d82]'
                         : 'bg-white/30 text-white'
@@ -49,14 +49,14 @@ export default function ResultsPage() {
                   >
                     {currentStep > step.number ? '✓' : step.number}
                   </div>
-                  <span className={`text-xs mt-2 whitespace-nowrap font-medium ${
+                  <span className={`text-[10px] sm:text-xs mt-1.5 sm:mt-2 whitespace-nowrap font-medium truncate max-w-full px-1 ${
                     currentStep >= step.number ? 'text-white' : 'text-white/70'
                   }`}>
                     {step.label}
                   </span>
                 </div>
                 {index < steps.length - 1 && (
-                  <div className={`flex-1 h-0.5 mx-4 ${
+                  <div className={`flex-1 h-0.5 mx-1.5 sm:mx-3 md:mx-4 min-w-[20px] ${
                     currentStep > step.number ? 'bg-white' : 'bg-white/30'
                   }`}></div>
                 )}
@@ -81,15 +81,15 @@ export default function ResultsPage() {
         {/* Tabs */}
         <div className="bg-white rounded-lg shadow-sm border border-gray-200">
           <div className="border-b border-gray-200">
-            <div className="flex space-x-8 px-6">
+            <div className="flex gap-2 sm:gap-4 md:gap-6 lg:gap-8 px-3 sm:px-4 md:px-6 overflow-x-auto scrollbar-hide">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`py-4 px-1 border-b-2 font-semibold text-sm transition-all duration-200 ${
+                  className={`py-3 sm:py-4 px-2 sm:px-3 border-b-2 font-semibold text-xs sm:text-sm md:text-base transition-all duration-200 whitespace-nowrap shrink-0 ${
                     activeTab === tab.id
                       ? 'border-[#1e4d99] text-[#1e4d99]'
-                      : 'border-transparent text-gray-500 hover:text-gray-700'
+                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
                   {tab.label}
