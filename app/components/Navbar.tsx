@@ -79,7 +79,7 @@ export default function Navbar({ onLoginClick, user }: NavbarProps = {}) {
                 />
               </div>
             </div>
-            <span className="text-sm sm:text-md  lg:text-md font-bold text-[#1e4d99] tracking-wide uppercase">
+            <span className="text-sm sm:text-md lg:text-md font-bold text-[#1e4d99]">
               Scheduling System Civil Engineering
             </span>
           </div>
@@ -88,21 +88,21 @@ export default function Navbar({ onLoginClick, user }: NavbarProps = {}) {
           <div className="hidden lg:flex items-center space-x-8">
             <Link 
               href="/schedule" 
-              className="relative text-sm font-semibold text-[#1e4d99] transition-colors duration-200 uppercase tracking-wide group pb-1"
+              className="relative text-sm font-semibold text-[#1e4d99] transition-colors duration-200 group pb-1"
             >
               Run Schedule Calculation
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1e4d99] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/dashboard" 
-              className="relative text-sm font-semibold text-[#1e4d99] transition-colors duration-200 uppercase tracking-wide group pb-1"
+              className="relative text-sm font-semibold text-[#1e4d99] transition-colors duration-200 group pb-1"
             >
               Dashboard
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1e4d99] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link 
               href="/projects" 
-              className="relative text-sm font-semibold text-[#1e4d99] transition-colors duration-200 uppercase tracking-wide group pb-1"
+              className="relative text-sm font-semibold text-[#1e4d99] transition-colors duration-200 group pb-1"
             >
               Projects
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#1e4d99] transition-all duration-300 group-hover:w-full"></span>
@@ -168,7 +168,7 @@ export default function Navbar({ onLoginClick, user }: NavbarProps = {}) {
               /* Login Button */
               <button
                 onClick={onLoginClick}
-                className="flex items-center justify-center px-2 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2 lg:px-6 lg:py-2 border-2 border-[#1e4d99] text-[#1e4d99] font-bold text-[10px] sm:text-sm md:text-base lg:text-base uppercase tracking-tight sm:tracking-wide hover:bg-[#1e4d99] hover:text-white transition-all duration-200 rounded whitespace-nowrap"
+                className="flex items-center justify-center px-2 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2 lg:px-6 lg:py-2 border-2 border-[#1e4d99] text-[#1e4d99] font-bold text-[10px] sm:text-sm md:text-base lg:text-base hover:bg-[#1e4d99] hover:text-white transition-all duration-200 rounded whitespace-nowrap"
               >
                 Log In
               </button>
@@ -200,21 +200,21 @@ export default function Navbar({ onLoginClick, user }: NavbarProps = {}) {
           <div className="px-4 pt-2 pb-4 space-y-2">
             <Link
               href="/schedule"
-              className="block px-3 py-2 text-sm font-semibold text-[#1e4d99] hover:bg-blue-50 rounded-md uppercase tracking-wide transition-colors duration-200"
+              className="block px-3 py-2 text-sm font-semibold text-[#1e4d99] hover:bg-blue-50 rounded-md transition-colors duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Run Schedule Calculation
             </Link>
             <Link
               href="/dashboard"
-              className="block px-3 py-2 text-sm font-semibold text-[#1e4d99] hover:bg-blue-50 rounded-md uppercase tracking-wide transition-colors duration-200"
+              className="block px-3 py-2 text-sm font-semibold text-[#1e4d99] hover:bg-blue-50 rounded-md transition-colors duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Dashboard
             </Link>
             <Link
               href="/projects"
-              className="block px-3 py-2 text-sm font-semibold text-[#1e4d99] hover:bg-blue-50 rounded-md uppercase tracking-wide transition-colors duration-200"
+              className="block px-3 py-2 text-sm font-semibold text-[#1e4d99] hover:bg-blue-50 rounded-md transition-colors duration-200"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Projects

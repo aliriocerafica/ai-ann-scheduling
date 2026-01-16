@@ -7,6 +7,7 @@ import FeaturesSection from './components/FeaturesSection';
 import HowItWorksSection from './components/HowItWorksSection';
 import RecentProjectsSection from './components/RecentProjectsSection';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { useState } from 'react';
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
       <HowItWorksSection />
       <RecentProjectsSection />
       <Footer />
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }
